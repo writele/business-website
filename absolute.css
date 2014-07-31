@@ -87,6 +87,23 @@ header, #feature, #content, footer {
 
 /*** TEXT ELEMENTS ***/
 
+nav > a {
+    font-size: 1.5em;
+    letter-spacing: 0.06em;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    background: #263973;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+nav > a:hover {
+    opacity: 0.5;    
+}
+
 #logo h1 {
     font-size: 2.5em;
     position: absolute;
@@ -138,22 +155,54 @@ footer p {
     right: 15px;
 }
 
-nav > a {
-    font-size: 1.5em;
-    letter-spacing: 0.06em;
+#service p, #contact>p {
     font-family: 'Open Sans', sans-serif;
-    color: white;
-    text-decoration: none;
-    background: #263973;
-    border-radius: 5px 5px 0 0;
-    padding: 5px;
-    position: absolute;
-    bottom: 0;
+    font-size: 1em;
+    padding: 10px 15px;
 }
 
-nav > a:hover {
+/* FORM */
+
+form {
+    line-height: 1.5;
+    position: absolute;
+    left: 55px;
+    top: 90px;
+}
+
+form p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em; 
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0;
+}
+
+form input[type="text"] {
+    width: 175px;
+}
+
+form input[type="submit"] {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+    background-color: #263973;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em; 
+    font-weight: 700;
+    border: 2px inset #041E37;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
     opacity: 0.5;    
 }
+
 
 /*** RESPONSIVE POSITIONING ***/
 /* HEADER */
@@ -214,6 +263,7 @@ nav img:hover {
     -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,1);
     box-shadow: 10px 10px 30px -10px rgba(0,0,0,1);
 }
+
 /* FOOTER */
 
 footer { 
