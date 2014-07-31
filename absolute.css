@@ -1,0 +1,222 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****** START MAIN CSS ******/
+
+    /* COLOR PALETTE: http://www.paletton.com/#uid=13-0u0kllllaFw0g0qFqFg0w0aF */
+
+/* IMPORTANT MISC. */
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 0;  
+}
+
+#container {
+    width: 100%;
+    height: 950px;
+    position: absolute;
+    background: url('45degreee_fabric.png');
+}
+
+#container, header, #logo, nav, #feature, #content, #services, #contact, footer {
+    box-sizing: border-box;
+    position: absolute;
+}
+
+header, #feature, #content, footer {
+    width: 1000px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+}
+
+
+/*** TEXT ELEMENTS ***/
+
+#logo h1 {
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#services h3, #contact h3 {
+    font-size: 1.75em;
+    text-align: center;
+    padding: 5px;
+}
+
+#logo h1, #services h3, #contact h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #34549D;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 15px auto;
+}
+
+#feature p {
+    position: absolute;
+    width: 350px;
+    margin: 0 auto;
+    top: 40%; 
+    left: 400px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+}
+
+#feature .comp {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+
+#feature .mouse {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
+nav > a {
+    font-size: 1.5em;
+    letter-spacing: 0.06em;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    background: #263973;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+nav > a:hover {
+    opacity: 0.5;    
+}
+
+/*** RESPONSIVE POSITIONING ***/
+/* HEADER */
+
+header { 
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 2px dotted #263973;
+}
+
+#logo { 
+    top: 0;
+    height: 60px;
+    width: 100%;
+}
+
+nav { 
+    top: 60px;
+    height: 40px;
+    width: 100%;
+}
+
+nav img {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    margin: -5px 0;
+}
+
+nav img:hover {
+    opacity: 0.5;    
+}
+
+/* MAIN CONTENT */
+
+#feature { 
+    height: 300px;
+    top: 100px;
+}
+      
+#content { 
+    height: 500px;
+    top: 400px;
+}
+
+
+#services, #contact { 
+    width: 480px;
+    height: 450px;
+    margin: 10px;
+    padding: 0;
+    border: 2px inset #041E37;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid #000000;
+    -webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 30px -10px rgba(0,0,0,1);
+    box-shadow: 10px 10px 30px -10px rgba(0,0,0,1);
+}
+/* FOOTER */
+
+footer { 
+    height: 50px;
+    top: 900px;
+}
