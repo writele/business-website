@@ -11,6 +11,7 @@
     <header>
        <div id="logo">
           <h1>Palmer Computers</h1>
+          <h3>Serving the North Carolina Triad Area</h3>
        </div>
         <nav>
             <a href="#" alt="Visit our store!">Store</a>
@@ -27,32 +28,54 @@
         <img src="Anonymous_mouse.png" alt="computer mouse" class="mouse">
     </article>
     <article id="content">
-        <section id="services" class="left">
+        <section id="services">
            <h3>Services</h3>
+           <p>We offer a range of services, including but not limited to:</p>
+           <ul>
+               <li>Repair of Apple and Windows laptops and desktops</li>
+               <li>Affordable replacement parts</li>
+               <li>Discount used Apple products</li>
+            <li>Technical help and instruction</li>
+            <li>System updates and installations</li>
+           </ul>
         </section>
-        <section id="contact" class="right">
+        <section id="contact">
             <h3>Contact Me</h3>
-            <p>I would love to hear from you! Use the form below to send me an e-mail.</p>
-            <form action="#" method="post">
-                <p><label for="name">Name:</label>
-                <input type="text" name="name" required></p>
-                <p><label for="email">E-mail:</label>
-                <input type="text" name="email" required></p>
-                <p><label for="phone">Phone (optional):</label>
-                <input type="text" name="phone"></p>
-               <p><label for="message">Message:</label></p>
-                <textarea rows="10" cols="50" name="message" placeholder="Type your message here." required></textarea>
-              <p><input type="submit"></p>
-            </form>
-            <?php
-if ($_POST['submit']) {
-    if (mail ($to, $subject, $body, $from)) { 
-        echo '<p>Your message has been sent!</p>';
-    } else { 
-        echo '<p>Something went wrong, go back and try again!</p>'; 
-    }
-}
-?>
+            <p>Interested in our services? Use the form below to send us an e-mail.</p>
+<?php 
+$action=$_REQUEST['action']; 
+if ($action=="")    /* display the contact form */ 
+    { 
+    ?> 
+    <form  action="" method="POST" enctype="multipart/form-data"> 
+    <input type="hidden" name="action" value="submit"> 
+    Your name:<br> 
+    <input name="name" type="text" value="" size="30"/><br> 
+    Your email:<br> 
+    <input name="email" type="text" value="" size="30"/><br> 
+    Your message:<br> 
+    <textarea name="message" rows="7" cols="30"></textarea><br> 
+    <input type="submit" value="Send email"/> 
+    </form> 
+    <?php 
+    }  
+else                /* send the submitted data */ 
+    { 
+    $name=$_REQUEST['name']; 
+    $email=$_REQUEST['email']; 
+    $message=$_REQUEST['message']; 
+    if (($name=="")||($email=="")||($message=="")) 
+        { 
+        echo "All fields are required, please fill <a href=\"\">the form</a> again."; 
+        } 
+    else{         
+        $from="From: $name<$email>\r\nReturn-path: $email"; 
+        $subject="Message sent using your contact form"; 
+        mail("weirdele@gmail.com", $subject, $message, $from); 
+        echo "Email sent!"; 
+        } 
+    }   
+?> 
         </section>
     </article>
     <footer>
