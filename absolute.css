@@ -287,10 +287,11 @@ footer {
 }
 
 /*** RESPONSIVE POSITIONING ***/
-@media only screen and (min-width: 470px) and (max-width: 529px) {
+@media only screen and (max-width: 529px) {
     header, #feature, #content, #services, #contact, footer {
     width: 470px; 
     }
+    
     #logo h3 {
     position: absolute;
     font-size: 1.2em;
@@ -298,29 +299,34 @@ footer {
     left: 90px;   
     width: 300px;
     }
-    #feature p {
-    width: 250px;
-    font-size: 1.5em;
-    top: 27%; 
-    left: 60px;
+    
+    nav img {
+    top: 200px;   
+    margin: 55px 100px 0 0;
+    padding: 0px;
+    }
+    
+    #feature {
+    display: none;
     }
     
     #content {
+    top: 150px;
     height: 1000px;
     }
     #services {
     top: 0;
-    width: 450px;
+    width: 400px;
     }
     #contact {
     top: 480px; 
-    width: 450px;
+    width: 400px;
     }
     footer {
-    top: 1400px; 
+    top: 1100px; 
     }
     #container {
-    height: 1400px;  
+    /*height: 1400px;  */
     background: white;
     }
     
